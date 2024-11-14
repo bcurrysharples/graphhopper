@@ -62,7 +62,7 @@ jobs:
       - name: Running JVM Flag ${{matrix.flags.flag}}
         run: |
           unset MAVEN_OPTS
-          echo "Category: ${{matrix.flags.category}}"
+          echo "Category: ${{matrix.flags.name}}"
           echo "JVM Flag: ${{matrix.flags.flag}}"
           echo "Description: ${{matrix.flags.description}}"
           export MAVEN_OPTS="${{matrix.flags.flag}}"
