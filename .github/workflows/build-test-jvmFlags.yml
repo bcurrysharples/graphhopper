@@ -10,24 +10,24 @@ jobs:
       matrix:
         java-version: [ 22 ]
         flags:
-          - category: "Insert Here"
-            flag: -XX:CompilerThreshold=1000
-            description: "Optimizes frequently used methods by lowering the compilation threshold, improving performance of core routing operations"
+          - name: "Insert Here"
+            flag: -XX:+UseStringCache
+            description: ""
 
-          - category: "Insert Here"
-            flag: -XX:+UseCompressedOops
-            description: "enables compressed ordinary object pointers"
+          - name: "Garbage collector"
+            flag: -XX:+UseZGC
+            description: "insert"
 
-          - category: "Optimisation du mémoire et performance"
+          - name: "The Array Whisperer 🔮"
             flag: -XX:+OptimizeFill
             description: "Optimise le remplissage de la mémoire inutilisée dans les objets."
 
-          - category: "Insert Here"
-            flag: -XX:+UseZGC
-            description: "enables the Z Garbage Collector"
+          - name: "Insert Here"
+            flag: -Dfile.encoding=UTF-8
+            description: "insert"
 
-          - category: "Insert Here"
-            flag: -XX:MaxInlineLevel=<value>
+          - name: "Insert Her"
+            flag: -XX:+HeapDumpOnOutOfMemoryError
             description: "sets the maximum depth for method inlining by the JIT compiler."
     steps:
       - uses: actions/checkout@v3
