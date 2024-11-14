@@ -10,25 +10,28 @@ jobs:
       matrix:
         java-version: [ 22 ]
         flags:
-          - name: "Insert Here"
+          - name: "Cache me if you can! 🏃"
             flag: -XX:+UseStringCache
-            description: ""
+            description: "Mise en cache des strings courtes, particulièrement des strings de petite 
+            taille utilisées fréquemment."
 
-          - name: "Garbage collector"
+          - name: "Oscar's cleanup crew 🗑️"
             flag: -XX:+UseZGC
-            description: "insert"
+            description: "Utilise le Garbage Collector 'Z' qui gère de grands monceaux en minimisant
+                          des temps de pause."
 
-          - name: "The Array Whisperer 🔮"
+          - name: "The array whisperer 🔮"
             flag: -XX:+OptimizeFill
             description: "Optimise le remplissage de la mémoire inutilisée dans les objets."
 
-          - name: "Insert Here"
+          - name: "Talk UTF to me 💋"
             flag: -Dfile.encoding=UTF-8
-            description: "insert"
+            description: "Force l'encodage des fichiers en UTF-8."
 
-          - name: "Insert Her"
+          - name: "CSI: memory 🕵️‍♀️"
             flag: -XX:+HeapDumpOnOutOfMemoryError
-            description: "sets the maximum depth for method inlining by the JIT compiler."
+            description: "Génère automatiquement un fichier de dump de la mémoire heap lorsqu'une 
+            erreur OutOfMemoryError survient"
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
