@@ -22,7 +22,7 @@ jobs:
 
           - name: "The array whisperer 🔮"
             flag: -XX:+OptimizeFill
-            description: "Optimise le remplissage de la mémoire inutilisée dans les objets."
+            description: "Optimise le remplissage de la mémoire inutilisée dans les objets ."
 
           - name: "Talk UTF to me 💋"
             flag: -Dfile.encoding=UTF-8
